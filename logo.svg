@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <foreignObject width="100%" height="100%">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script><![CDATA[(function(){const XHTML_NS="http://www.w3.org/1999/xhtml";const fo=document.querySelector("foreignObject");const root=fo.firstElementChild;const originalCreateElement=document.createElement.bind(document);const originalCreateElementNS=document.createElementNS.bind(document);Object.defineProperty(document,"head",{get(){return root.querySelector("head")},configurable:true});Object.defineProperty(document,"body",{get(){return root.querySelector("body")},configurable:true});Object.defineProperty(document,"documentElement",{get(){return root},configurable:true});document.createElement=function(tagName,options){if(typeof tagName==="string"){return originalCreateElementNS(XHTML_NS,tagName,options)}return originalCreateElement(tagName,options)};document.createElementNS=function(namespaceURI,qualifiedName,options){if(namespaceURI==null||namespaceURI===XHTML_NS){return originalCreateElementNS(XHTML_NS,qualifiedName,options)}return originalCreateElementNS(namespaceURI,qualifiedName,options)};})();]]></script>
+        <style><![CDATA[*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;font-family:Arial,sans-serif;background:#080808;color:#fff}
+body{position:relative;overflow-x:hidden;cursor:default}
+#bg{position:fixed;inset:0;z-index:0;background:linear-gradient(rgba(5,5,5,.25),rgba(5,5,5,.45)),url("https://images.pexels.com/photos/2083722/pexels-photo-2083722.jpeg") center/cover no-repeat;transform:scale(1.03)}
+#bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.08),transparent 38%),linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.5))}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:1}
+#snow{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}
+.topbar{position:relative;width:100%;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;border-bottom:1px solid rgba(255,255,255,.09);background:rgba(8,8,8,.58);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:20}
+.brand{display:flex;align-items:center;gap:12px;min-width:230px}
+.brandIcon{width:39px;height:39px;border-radius:11px;overflow:hidden;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);box-shadow:0 5px 18px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.08);flex-shrink:0}
+.brandIcon img{width:100%;height:100%;object-fit:cover;display:block}
+.brandText{font-size:15px;font-weight:700;letter-spacing:-.3px;white-space:nowrap}
+.nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:5px}
+.nav button{position:relative;border:0;background:none;color:rgba(255,255,255,.48);padding:10px 13px;font-size:13px;cursor:pointer;transition:color .2s ease,transform .2s ease}
+.nav button:hover,.nav button.active{color:#fff}
+.nav button.active{font-style:italic}
+.navIndicator{position:absolute;height:2px;width:20px;left:0;bottom:1px;background:#fff;border-radius:10px;transition:left .3s cubic-bezier(.2,.8,.2,1),width .3s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.topActions{min-width:230px;display:flex;justify-content:flex-end}
+.iconBtn{width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;cursor:pointer;transition:.2s}
+.iconBtn:hover{background:rgba(255,255,255,.1);transform:translateY(-1px)}
+.content{position:relative;z-index:5;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:24px 0 80px}
+.view{display:none}.view.active{display:block}
+.homeHero{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,520px);align-items:center;gap:32px;margin:0;padding:0}
+.heroText{padding:0;margin:0}
+.heroText h1{margin:0;max-width:680px;font-size:clamp(42px,6vw,78px);line-height:.96;letter-spacing:-4px;font-weight:800;text-shadow:0 10px 40px rgba(0,0,0,.45)}
+.heroText p{margin:23px 0 0;min-height:22px;color:rgba(255,255,255,.62);font-size:15px;letter-spacing:.1px}
+.heroCardWrap{perspective:1200px;display:flex;justify-content:center;margin:0;padding:0}
+.heroCard{--tx:0px;--ty:0px;--rx:0deg;--ry:0deg;--mx:50%;--my:50%;position:relative;width:100%;max-width:500px;aspect-ratio:16/10;border-radius:24px;overflow:hidden;transform:translate3d(var(--tx),var(--ty),0) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease;box-shadow:0 35px 80px rgba(0,0,0,.55),0 8px 25px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.16);background:#111;isolation:isolate}
+.heroCard:hover{box-shadow:0 45px 100px rgba(0,0,0,.65),0 15px 35px rgba(0,0,0,.4),inset 0 1px rgba(255,255,255,.2)}
+.heroCard:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.22),transparent 28%);mix-blend-mode:screen;opacity:.75}
+.heroCard:after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 25%,transparent 70%,rgba(0,0,0,.2))}
+.heroCard img{width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.025);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.heroCard:hover img{transform:scale(1.07)}
+.heroCardLabel{position:absolute;left:18px;bottom:17px;z-index:5;padding:8px 11px;border-radius:10px;background:rgba(0,0,0,.48);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(12px);font-size:11px;color:rgba(255,255,255,.82)}
+.section{margin-top:28px}
+.search{width:100%;height:46px;border:1px solid rgba(255,255,255,.1);border-radius:13px;outline:none;padding:0 16px;background:rgba(8,8,8,.55);color:#fff;backdrop-filter:blur(14px);transition:.2s}
+.search::placeholder{color:rgba(255,255,255,.35)}
+.search:focus{border-color:rgba(255,255,255,.22);background:rgba(10,10,10,.7)}
+.grid{margin-top:18px;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.appCard{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:rgba(10,10,10,.62);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(12px);cursor:pointer;transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease}
+.appCard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18);background:rgba(20,20,20,.72);box-shadow:0 15px 35px rgba(0,0,0,.3)}
+.logo{width:72%;height:72%;object-fit:contain;display:block;border-radius:8px}
+.panel{max-width:760px;margin:30px auto 0;padding:28px;border-radius:18px;background:rgba(8,8,8,.62);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(16px)}
+.panel h2{margin:0 0 18px;font-size:19px}.panel p{color:rgba(255,255,255,.64);line-height:1.7;white-space:pre-line;font-size:14px}
+.setting{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07)}.setting:last-child{border-bottom:0}.setting span{font-size:14px}
+.setting select{border:1px solid rgba(255,255,255,.1);background:#111;color:#fff;border-radius:9px;padding:8px 11px;outline:none}
+.toggle{position:relative;width:44px;height:24px;border-radius:20px;background:#292929;cursor:pointer;transition:.2s}.toggle:after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#aaa;transition:.2s}.toggle.on{background:#fff}.toggle.on:after{left:23px;background:#111}
+.tooltip{position:fixed;z-index:100;pointer-events:none;padding:7px 10px;border-radius:8px;background:rgba(10,10,10,.92);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:11px;opacity:0;transform:translate(12px,12px);transition:opacity .12s;backdrop-filter:blur(10px)}
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}.modal.show{display:flex}
+.modalBox{width:min(390px,calc(100% - 32px));padding:23px;border-radius:18px;background:rgba(18,18,18,.92);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.modalBox h3{margin:0 0 8px;font-size:17px}.modalBox p{margin:0;color:rgba(255,255,255,.55);font-size:13px;line-height:1.5}.modalActions{display:flex;gap:8px;margin-top:20px}.modalActions button{flex:1;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:#181818;color:#fff;cursor:pointer}.modalActions button.primary{background:#fff;color:#111}
+@media(max-width:900px){.homeHero{grid-template-columns:1fr;gap:38px}.heroText{text-align:center}.heroText h1{margin:auto}.heroCard{max-width:620px}.grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:700px){.topbar{padding:0 14px}.brandText{display:none}.brand{min-width:auto}.topActions{min-width:auto}.nav{gap:0}.nav button{padding:10px 7px;font-size:11px}.content{width:min(100% - 28px,1180px);padding-top:18px}.heroText h1{font-size:clamp(38px,11vw,58px);letter-spacing:-2.5px}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(4,1fr);gap:8px}.heroCard{border-radius:18px}}]]></style>
+        <title>Home - Classroom</title>
+      </head>
+      <body>
+        <div id="bg"></div><div id="particles"></div><canvas id="snow"></canvas>
+
+<header class="topbar">
+<div class="brand"><div class="brandIcon"><img src="https://preview.redd.it/denial-frustration-over-zeals-mother-v0-qsn1kjtjws6h1.jpeg?auto=webp&amp;s=1cbbe549c7cec3ae8e0ed610e217ef51f7925318"/></div><div class="brandText">tommy's unbIocked games</div></div>
+<nav class="nav">
+<button class="active" data-page="home">home</button><button data-page="apps">apps</button><button data-page="tools">tools</button><button data-page="readme">readme</button><button data-page="settings">settings</button><div class="navIndicator"></div>
+</nav>
+<div class="topActions"><button class="iconBtn" id="soundBtn">♫</button></div>
+</header>
+
+<main class="content">
+<section id="home" class="view active">
+<div class="homeHero"><div class="heroText"><h1>tommy's unbIocked games</h1><p id="subtitle"></p></div>
+<div class="heroCardWrap"><div class="heroCard" id="heroCard"><img src="https://files.catbox.moe/q3ahqv.png"/><div class="heroCardLabel">tommy's unbIocked games</div></div></div></div>
+<div class="section"><input class="search" id="homeSearch" placeholder="search games..."/><div class="grid" id="homeGrid"></div></div>
+</section>
+
+<section id="apps" class="view"><input class="search" id="appSearch" placeholder="search apps..."/><div class="grid" id="appGrid"></div></section>
+<section id="tools" class="view"><div class="grid" id="toolGrid"></div></section>
+<section id="readme" class="view"><div class="panel"><h2>readme</h2><p>methods to logout:
+
+1. hold power button, it will show options to sign out or shutdown.
+2. use ctrl + alt + r to quickly sign out (RECOMMENDED)
+
+made with love by tommy aka giggles- (WOWOOWOW NONOONONO, peak cs online)</p></div></section>
+
+<section id="settings" class="view"><div class="panel"><h2>settings</h2>
+<div class="setting"><span>snow</span><div class="toggle" id="snowToggle"></div></div>
+<div class="setting"><span>sound</span><div class="toggle on" id="soundToggle"></div></div>
+<div class="setting"><span>theme</span><select id="themeSelect"><option value="gray">gray</option><option value="black">black</option></select></div>
+</div></section>
+</main>
+
+<div class="tooltip" id="tooltip"></div>
+<div class="modal" id="blankPrompt"><div class="modalBox"><h3>open in about:blank?</h3><p>open this site in a new about:blank tab?</p><div class="modalActions"><button id="blankNo">no thanks</button><button class="primary" id="blankYes">open</button></div></div></div>
+<div class="modal" id="appPrompt"><div class="modalBox"><h3 id="appPromptTitle">open app</h3><p>do you want to open this in about:blank?</p><div class="modalActions"><button id="appNormal">normal</button><button class="primary" id="appBlank">about:blank</button></div></div></div>
+        <script><![CDATA[const bgImage="https://images.pexels.com/photos/2083722/pexels-photo-2083722.jpeg";
+const cdn="https://cdn.jsdelivr.net/gh/opsec4ever/studysync@main/";
+const apps=[
+{name:"Kiwi",logo:"https://kahoot.si/images/kiwi-logo.png",url:"https://kahoot.si"},
+{name:"TikTok",logo:"https://www.tiktok.com/favicon.ico",url:"https://www.tiktok.com"},
+{name:"YouTube",logo:"https://www.youtube.com/favicon.ico",url:"https://www.youtube.com"},
+{name:"GN-Math NEW",logo:"https://gn-math.dev/gn-mathtitle.png",url:"https://gn-math.dev/"},
+{name:"GN-Math OLD",logo:"https://gn-math.dev/gn-mathtitle.png",url:"https://genizy-math.vercel.app/"},
+{name:"Spotify",logo:"https://www.scdn.co/i/_global/favicon.ico",url:"https://spotify.com"},
+{name:"CrazyGames",logo:"https://www.crazygames.com/images/logo/master/logo-master-white.svg",url:"https://crazygames.com"},
+{name:"FreezeNova",logo:"https://freezenova.com/imgs/freezenova-logo.png",url:"https://freezenova.com/"},
+{name:"Poki",logo:"https://poki.com/favicon.ico",url:"https://poki.com"},
+{name:"Roblox",logo:"https://www.roblox.com/favicon.ico",url:"https://www.roblox.com"},
+{name:"Arctic",logo:"https://tse1.mm.bing.net/th/id/OIP.iHkOolt96uNmu0SPKxxZMgHaHa?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3",url:"https://storage.googleapis.com/math-homework/index.html"}];
+const tools=[{name:"Kahoot Rocks",logo:"https://kahoot.club/favicon.ico",url:"https://kahoot.club"}];
+const subtitles=["iluvgoguardian","cs online was peak back then 😔","#1 unbӏосkеԁ gаmеs for riverside","2024 - 2025 lowk prime cs online","always beats freezenova LOL"];
+const homeGrid=document.getElementById("homeGrid"),appGrid=document.getElementById("appGrid"),toolGrid=document.getElementById("toolGrid"),tooltip=document.getElementById("tooltip");
+
+function makeCard(item){
+const card=document.createElement("div");card.className="appCard";card.dataset.name=item.name.toLowerCase();card.innerHTML=`<img class="logo" src="${item.logo}" alt="">`;
+card.addEventListener("mouseenter",()=>{tooltip.textContent=item.name;tooltip.style.opacity="1"});
+card.addEventListener("mousemove",e=>{tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px"});
+card.addEventListener("mouseleave",()=>tooltip.style.opacity="0");
+card.addEventListener("click",()=>openAppPrompt(item));return card}
+function renderApps(){appGrid.innerHTML="";homeGrid.innerHTML="";apps.forEach(app=>{appGrid.appendChild(makeCard(app));homeGrid.appendChild(makeCard(app))})}
+function renderTools(){toolGrid.innerHTML="";tools.forEach(tool=>toolGrid.appendChild(makeCard(tool)))}
+renderApps();renderTools();
+
+const navButtons=[...document.querySelectorAll(".nav button")],views=[...document.querySelectorAll(".view")],indicator=document.querySelector(".navIndicator");
+function updateIndicator(button){const nav=document.querySelector(".nav"),nr=nav.getBoundingClientRect(),r=button.getBoundingClientRect();indicator.style.left=(r.left-nr.left)+"px";indicator.style.width=r.width+"px"}
+function showPage(page){navButtons.forEach(b=>b.classList.toggle("active",b.dataset.page===page));views.forEach(v=>v.classList.toggle("active",v.id===page));const active=document.querySelector(`.nav button[data-page="${page}"]`);if(active)updateIndicator(active)}
+navButtons.forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+window.addEventListener("resize",()=>{const a=document.querySelector(".nav button.active");if(a)updateIndicator(a)});
+requestAnimationFrame(()=>updateIndicator(document.querySelector(".nav button.active")));
+
+function setupSearch(inputId,gridId){const input=document.getElementById(inputId),grid=document.getElementById(gridId);input.addEventListener("input",()=>{const value=input.value.toLowerCase().trim();[...grid.children].forEach(card=>card.style.display=!value||card.dataset.name.includes(value)?"flex":"none")})}
+setupSearch("homeSearch","homeGrid");setupSearch("appSearch","appGrid");
+
+const heroCard=document.getElementById("heroCard");
+heroCard.addEventListener("mousemove",e=>{const r=heroCard.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height,dx=x-.5,dy=y-.5;heroCard.style.setProperty("--tx",`${-dx*15}px`);heroCard.style.setProperty("--ty",`${-dy*15}px`);heroCard.style.setProperty("--ry",`${dx*7}deg`);heroCard.style.setProperty("--rx",`${-dy*7}deg`);heroCard.style.setProperty("--mx",`${x*100}%`);heroCard.style.setProperty("--my",`${y*100}%`)});
+heroCard.addEventListener("mouseleave",()=>{["--tx","--ty","--rx","--ry"].forEach((x,i)=>heroCard.style.setProperty(x,["0px","0px","0deg","0deg"][i]));heroCard.style.setProperty("--mx","50%");heroCard.style.setProperty("--my","50%")});
+
+let subtitleIndex=0;
+function typeSubtitle(){const element=document.getElementById("subtitle"),text=subtitles[subtitleIndex];let i=0;const type=setInterval(()=>{element.textContent=text.slice(0,i++);if(i>text.length){clearInterval(type);setTimeout(()=>{let j=text.length;const erase=setInterval(()=>{element.textContent=text.slice(0,j--);if(j<0){clearInterval(erase);subtitleIndex=(subtitleIndex+1)%subtitles.length;setTimeout(typeSubtitle,350)}},28)},2200)}},45)}
+typeSubtitle();
+
+const particles=document.getElementById("particles");
+for(let i=0;i<45;i++){const dot=document.createElement("div");dot.style.cssText="position:absolute;width:2px;height:2px;border-radius:50%;background:rgba(255,255,255,.22);left:"+(Math.random()*100)+"%;top:"+(Math.random()*100)+"%";particles.appendChild(dot)}
+
+const snowCanvas=document.getElementById("snow"),snowCtx=snowCanvas.getContext("2d");let snowEnabled=false,snowflakes=[];
+function resizeSnow(){snowCanvas.width=innerWidth;snowCanvas.height=innerHeight}resizeSnow();window.addEventListener("resize",resizeSnow);
+function createSnow(){snowflakes=[];for(let i=0;i<100;i++)snowflakes.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,size:Math.random()*4+2,speed:Math.random()*1.2+.4,drift:Math.random()-.5})}createSnow();
+let mouseWind=0,lastMouseX=innerWidth/2;window.addEventListener("mousemove",e=>{mouseWind=(e.clientX-lastMouseX)*.015;lastMouseX=e.clientX});
+function drawSnow(){snowCtx.clearRect(0,0,snowCanvas.width,snowCanvas.height);if(snowEnabled){snowCtx.fillStyle="rgba(255,255,255,.8)";snowflakes.forEach(f=>{f.y+=f.speed;f.x+=f.drift+mouseWind;if(f.y>innerHeight+10){f.y=-10;f.x=Math.random()*innerWidth}if(f.x>innerWidth+10)f.x=-10;if(f.x<-10)f.x=innerWidth+10;snowCtx.fillRect(f.x,f.y,f.size,f.size)})}mouseWind*=.94;requestAnimationFrame(drawSnow)}drawSnow();
+
+const snowToggle=document.getElementById("snowToggle"),soundToggle=document.getElementById("soundToggle"),themeSelect=document.getElementById("themeSelect");
+snowToggle.addEventListener("click",()=>{snowEnabled=!snowEnabled;snowToggle.classList.toggle("on",snowEnabled)});
+themeSelect.addEventListener("change",()=>{document.getElementById("bg").style.background=themeSelect.value==="black"?`linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.86)),url("${bgImage}") center/cover no-repeat`:`linear-gradient(rgba(5,5,5,.25),rgba(5,5,5,.45)),url("${bgImage}") center/cover no-repeat`});
+
+const audio=new Audio(cdn+"teeth.mp3");audio.loop=true;audio.volume=.45;let soundOn=true;
+function trySound(){if(soundOn)audio.play().catch(()=>{})}
+document.addEventListener("click",trySound,{once:true});
+document.getElementById("soundBtn").addEventListener("click",()=>{soundOn=!soundOn;document.getElementById("soundBtn").textContent=soundOn?"♫":"🔇";soundToggle.classList.toggle("on",soundOn);if(soundOn)audio.play().catch(()=>{});else audio.pause()});
+soundToggle.addEventListener("click",()=>{soundOn=!soundOn;soundToggle.classList.toggle("on",soundOn);document.getElementById("soundBtn").textContent=soundOn?"♫":"🔇";if(soundOn)audio.play().catch(()=>{});else audio.pause()});
+
+let selectedApp=null;
+function openAppPrompt(item){selectedApp=item;document.getElementById("appPromptTitle").textContent=item.name;document.getElementById("appPrompt").classList.add("show")}
+document.getElementById("appNormal").addEventListener("click",()=>{if(selectedApp)window.open(selectedApp.url,"_blank");document.getElementById("appPrompt").classList.remove("show")});
+document.getElementById("appBlank").addEventListener("click",()=>{if(selectedApp){const tab=window.open("about:blank","_blank");if(tab){tab.document.open();tab.document.write(`<html><head><title>${selectedApp.name}</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}iframe{width:100%;height:100%;border:0}</style></head><body><iframe src="${selectedApp.url}" allowfullscreen></iframe></body></html>`);tab.document.close()}}document.getElementById("appPrompt").classList.remove("show")});
+
+const blankPrompt=document.getElementById("blankPrompt");
+if(!sessionStorage.getItem("tommyBlankPrompt"))setTimeout(()=>blankPrompt.classList.add("show"),500);
+document.getElementById("blankNo").addEventListener("click",()=>{blankPrompt.classList.remove("show");sessionStorage.setItem("tommyBlankPrompt","1")});
+document.getElementById("blankYes").addEventListener("click",()=>{sessionStorage.setItem("tommyBlankPrompt","1");const tab=window.open("about:blank","_blank");if(tab){tab.document.open();tab.document.write(`<html><head><title>Home - Classroom</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}iframe{width:100%;height:100%;border:0}</style></head><body><iframe src="${location.href}" allowfullscreen></iframe></body></html>`);tab.document.close()}blankPrompt.classList.remove("show")});]]></script>
+      </body>
+    </html>
+  </foreignObject>
+</svg>
